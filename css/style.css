@@ -162,6 +162,7 @@ table { border-collapse: collapse; width: 100%; }
 }
 
 .brand { display: flex; align-items: center; gap: 0.65rem; }
+.brand-logo { height: 42px; width: auto; display: block; }
 .brand-mark {
   width: 46px;
   height: 46px;

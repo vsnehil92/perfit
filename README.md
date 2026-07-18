@@ -50,6 +50,10 @@ you provided (`PriceList.pdf`, `PERFIT.pdf`, effective 01/01/2026) — nothing t
 Contact details (address, phone, email, GSTIN 09AAKFA0238Q1Z3) are the ones you gave me.
 The homepage hero carousel, About page photos, and the whole Gallery page now use 12 real
 dispatch/product photos you supplied (`images/gallery/perfit-pipes-01.jpg` … `-12.jpg`).
+The header logo across all 13 pages is now your real `images/logo.png` — auto-trimmed from
+`perfit-Logo-1.png` (whitespace cropped, background made transparent, resized to 900px wide).
+The footer still uses the text-based "PERFIT" wordmark since the real logo has no dark-background
+variant (its blue/red outline strokes would lose contrast on the dark navy footer).
 
 ## Carousel component
 
@@ -65,19 +69,15 @@ empty `.carousel-dots` div) — the JS finds it automatically, no extra wiring n
 
 ## What's still placeholder — replace before going live
 
-1. **Logo** — the header/footer currently render a text-based "PF" mark + "PERFIT" wordmark
-   using the given palette. Swap it for your real logo file (the one in `PERFIT.pdf` has a
-   blue/red diamond mark). Replace the `.brand-mark` div and `.brand-word` text in every page
-   with an `<img src="images/logo.png" alt="Perfit Pipes & Fittings">`.
-2. **Category-specific product photos** — the 5 `product-*.html` pages still show dashed
+1. **Category-specific product photos** — the 5 `product-*.html` pages still show dashed
    `.ph-img` placeholders (e.g. "SWR PIPES PHOTO"). The 12 supplied photos are generic
    pipe/dispatch shots, not identifiable per product line, so they weren't used here to avoid
    mislabeling — drop category-specific photos into `images/products/` and replace those
    `<div class="ph-img">...</div>` blocks with `<img>` tags when you have them.
-3. **Testimonials** — all entries on `testimonials.html` and the homepage preview are marked
+2. **Testimonials** — all entries on `testimonials.html` and the homepage preview are marked
    "Placeholder" — swap in real customer names/quotes (with permission) when available.
-4. **Social links** — footer social icons (`#`) need real Facebook/Instagram/LinkedIn URLs.
-5. **Contact form** — `contact.html` and the homepage enquiry form submit client-side only
+3. **Social links** — footer social icons (`#`) need real Facebook/Instagram/LinkedIn URLs.
+4. **Contact form** — `contact.html` and the homepage enquiry form submit client-side only
    (see `js/main.js`) and show a "not connected yet" message. To make them actually send
    emails, either:
    - Use a form backend like [Formspree](https://formspree.io) or [Web3Forms](https://web3forms.com)
